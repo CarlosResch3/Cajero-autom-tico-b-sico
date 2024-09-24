@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cajero automatico</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cajero ATM</h1>
+
+        <div id="login">
+            <h3>Selecciona una cuenta</h3>
+            <select id="accountSelect">
+                <option value="0">Charly</option>
+                <option value="1">Betty</option>
+                <option value="2">Eddy</option>
+            </select>
+            <input type="password" id="passwordInput" placeholder="Ingresa tu contraseña">
+            <button onclick="login()">Ingresar</button>
+        </div>
+        <div id="Options">
+            <h3>Selecciona una opción</h3>
+            <button onclick="consultarSaldo()">Consultar Saldo</button>
+            <button onclick="mostrarIngreso()">Ingresar Monto</button>
+            <button onclick="mostrarRetiro()">Retirar Monto</button>
+            <button onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
+        <div id="transaction">
+            <h3 id="transactionType"></h3>
+            <input type="number" id="transactionAmount" placeholder="Escribe el Monto">
+            <button onclick="realizarTransaccion()">Confirmar</button>
+        </div>
+        <h3 id="message"></h3>
+    </div>
+    
+
+    <script src="cajero.js"></script>
+</body>
+</html>
